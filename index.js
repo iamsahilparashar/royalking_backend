@@ -5,11 +5,12 @@ const cors = require('cors');
 const port = process.env.PORT ||  5000;
 
 
-// var corsOptions = {
-//     origin: '*',
-//     methods: ["GET", "POST"]
-// }
-app.use(cors());
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
+
+app.use(cors(corsOptions));
+
 connectToMongo();
 
 
